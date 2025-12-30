@@ -1,0 +1,252 @@
+.car-details-container {
+  padding: 30px 20px;
+  min-height: calc(100vh - 300px);
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover {
+  color: var(--primary-color);
+}
+
+.car-details-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+  align-items: start;
+}
+
+.car-image-section {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.car-main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.car-details-section {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.car-header {
+  margin-bottom: 20px;
+}
+
+.car-header h1 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.car-type-badge {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.car-rating-section {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.rating {
+  display: block;
+  color: var(--accent-color);
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.reviews {
+  display: block;
+  color: var(--text-color);
+  font-size: 12px;
+}
+
+.car-description {
+  color: var(--text-color);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+.specs-section,
+.amenities-section,
+.insurance-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.specs-section h3,
+.amenities-section h3,
+.insurance-section h3,
+.pricing-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.spec {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec label {
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.spec value {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.amenities-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.amenity {
+  padding: 8px 12px;
+  background-color: var(--light-gray);
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.pricing-section {
+  margin-bottom: 30px;
+}
+
+.price-display {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.price-amount {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.price-period {
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.price-note {
+  font-size: 12px;
+  color: var(--text-color);
+  font-style: italic;
+}
+
+.insurance-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: var(--light-gray);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.insurance-option input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.book-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.additional-info {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.additional-info h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.additional-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.additional-info li {
+  padding: 10px 0;
+  padding-left: 25px;
+  color: var(--text-color);
+  position: relative;
+}
+
+.additional-info li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .car-details-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amenities-list {
+    grid-template-columns: 1fr;
+  }
+
+  .car-header h1 {
+    font-size: 22px;
+  }
+}
