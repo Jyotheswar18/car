@@ -65,9 +65,13 @@
 }
 
 .search-btn {
-  width: 100%;
-  padding: 12px;
+  padding: 12px 30px;
   font-size: 16px;
+  height: fit-content;
+  white-space: nowrap;
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: fit-content;
 }
 
 .features-section {
@@ -135,6 +139,13 @@
   font-size: 18px;
   margin-bottom: 30px;
   opacity: 0.95;
+}
+
+.cta-section .btn {
+  display: inline-block;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {

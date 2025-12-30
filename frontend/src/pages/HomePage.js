@@ -6,6 +6,7 @@ const HomePage = () => {
   const [pickupDate, setPickupDate] = useState('');
   const [dropoffDate, setDropoffDate] = useState('');
   const [pickupLocation, setPickupLocation] = useState('');
+  const [dropoffLocation, setDropoffLocation] = useState('');
   const navigate = useNavigate();
 
   const handleSearch = (e) => {
@@ -13,7 +14,8 @@ const HomePage = () => {
     const params = new URLSearchParams({
       pickupDate,
       dropoffDate,
-      pickupLocation
+      pickupLocation,
+      dropoffLocation
     });
     navigate(`/search?${params.toString()}`);
   };
@@ -41,6 +43,16 @@ const HomePage = () => {
                   placeholder="Where do you pick up?"
                   value={pickupLocation}
                   onChange={(e) => setPickupLocation(e.target.value)}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label>Dropoff Location</label>
+                <input
+                  type="text"
+                  placeholder="Where do you drop off?"
+                  value={dropoffLocation}
+                  onChange={(e) => setDropoffLocation(e.target.value)}
                   required
                 />
               </div>
